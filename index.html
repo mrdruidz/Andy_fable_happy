@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Братуха, с днём рождения!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f0f0f;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 40px 20px;
+      box-sizing: border-box;
+    }
+
+    h1, h2 {
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    .hint {
+      opacity: 0.7;
+      font-size: 0.9rem;
+      margin-top: 20px;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .glitch {
+      position: relative;
+      animation: glitch 1s infinite;
+    }
+
+    @keyframes glitch {
+      0% { text-shadow: 2px 0 red, -2px 0 blue; }
+      50% { text-shadow: -2px 0 red, 2px 0 blue; }
+      100% { text-shadow: 0 0 red, 0 0 blue; }
+    }
+
+    .phrase {
+      min-height: 75vh;
+      font-size: clamp(2rem, 6vw, 5rem);
+      font-weight: 900;
+    }
+
+    .phrase p {
+      font-size: clamp(1.2rem, 3vw, 2rem);
+    }
+
+    .fake-end {
+      background: #000;
+      color: #aaa;
+    }
+
+    .final {
+      background: linear-gradient(135deg, #ff0080, #7928ca);
+      min-height: 100vh;
+    }
+
+    .final h1 {
+      font-size: clamp(2.2rem, 6vw, 4.5rem);
+    }
+
+    .video-wrap {
+      width: min(100%, 900px);
+      margin-top: 30px;
+    }
+
+    .video-wrap iframe {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 0;
+      border-radius: 16px;
+      box-shadow: 0 0 35px rgba(0,0,0,.35);
+    }
+
+    .video-link {
+      display: inline-block;
+      margin-top: 18px;
+      color: #fff;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    .shake {
+      animation: shake 0.5s;
+    }
+
+    @keyframes shake {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(-5px); }
+      50% { transform: translateX(5px); }
+      75% { transform: translateX(-5px); }
+      100% { transform: translateX(0); }
+    }
+
+    @media (max-width: 768px) {
+      p { font-size: 1rem; }
+      section { padding: 30px 16px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<div id="loader" style="position:fixed;inset:0;background:#000;display:flex;align-items:center;justify-content:center;z-index:9999;flex-direction:column;">
+  <div style="font-size:1.5rem;opacity:.8">Вивчаємо нову мову..</div>
+  <div id="loadText" style="margin-top:10px;opacity:.6">Роздумуємо за смисл в смислі..</div>
+</div>
+
+<audio id="scrollSound" preload="auto">
+  <source src="scroll.mp3" type="audio/mpeg">
+</audio>
+
+<section>
+  <h1>Братуха, поздравляю с днём рождения! 🎉</h1>
+  <p>
+    Желаю улыбку до ушей, позитива, радости, веселых класных моментов, чтоб все вокруг радывало!
+    Прошли через многое, видели дохуя, житуха потрепала немного ну и нече, она закаляла в тебе характер,
+    силу, волю, осталось только выбрать цель чёткую не бабскую, и медленно но уверенно ити к ней!
+    Всё будет, не ссы! Тачки, хаты, тёлки, бабки еще вся жизнь впереди, и с такой закалкой,
+    море уже по колено)
+  </p>
+  <div class="hint">Крути колесико вниз. Там дальше самое интересное ⬇️</div>
+</section>
+
+<section class="phrase">
+  <h2 class="glitch reveal">Проматуем время</h2>
+  <p class="reveal">Годы идут, а мы всё ещё здесь. Значит, всё правильно делаем 😎</p>
+</section>
+
+<section class="phrase">
+  <h2 class="reveal">Вспоминаем старое</h2>
+  <p class="reveal">Прошлое не забываем — просто периодически достаём самые ебанутые воспоминания.</p>
+</section>
+
+<section class="phrase">
+  <h2 class="glitch reveal">Шоб хуй стоял и серце билось</h2>
+  <p class="reveal">Ну а как ещё пожелать человеку настоящего мужского счастья? 😂</p>
+</section>
+
+<section class="phrase">
+  <h2 class="reveal">КРЯЯЯЯЯ</h2>
+  <p class="reveal">Без этого любой день рождения считается недействительным.</p>
+</section>
+
+<section class="phrase">
+  <h2 class="glitch reveal">ЗА АНИМЕ 🍥</h2>
+  <p class="reveal">Чтобы вайб был правильный, сюжет интересный, а филлеров в жизни поменьше.</p>
+</section>
+
+<section>
+  <h2 class="reveal">Стелем красную дорожку для самого крутого мидера 👑</h2>
+  <p class="reveal">
+    Кароче чё я, напути праведном ты уже, работа бронь, близкие рядом, даж какие они не были но рядом и помогут еси попросишь,
+    не забывай просить, и на великую цель любой айсберг ростает.
+  </p>
+</section>
+
+<section class="fake-end">
+  <h2>Станция «Уже почти всё», КОНЕЧНАЯ, выходим из вагона и незабываем свои вещи!</h2>
+  <p>Дальше поезд не едет… 😐</p>
+  <p class="hint">Хотя нет. Есть ещё одно.</p>
+</section>
+
+<section class="final">
+  <h1 class="glitch">Всё еще впереди! 🚀</h1>
+
+  <p class="reveal">
+    Ну и ето -_6--7 епта)<br><br>
+    <strong>С 82 летием тя плесень!) 😂❤️</strong>
+  </p>
+
+  <div class="video-wrap reveal">
+    <iframe
+      src="https://drive.google.com/file/d/1AP7Ncm-KU2xAc2QDiN6jzCCmQzi6xyIy/view?usp=sharing"
+      title="Подарочное видео"
+      allow="autoplay">
+    </iframe>
+
+    <a
+      class="video-link"
+      href="https://drive.google.com/file/d/1AP7Ncm-KU2xAc2QDiN6jzCCmQzi6xyIy/view?usp=sharing"
+      target="_blank"
+      rel="noopener noreferrer">
+      Открыть видео в Google Drive ↗
+    </a>
+  </div>
+</section>
+
+<script>
+  // ===== ФЕЙКОВАЯ ЗАГРУЗКА =====
+  const loader = document.getElementById('loader');
+  const loadText = document.getElementById('loadText');
+
+  const steps = [
+    'Розбираємо уламки',
+    'Проматуємо час',
+    'Вспоминаем старое',
+    'КРЯЯЯЯЯ',
+    'Проверяем, шоб хуй стоял и серце билось',
+    'Прокидаємось)'
+  ];
+
+  let step = 0;
+
+  const loaderInterval = setInterval(() => {
+    loadText.textContent = steps[step % steps.length];
+    step++;
+  }, 700);
+
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      clearInterval(loaderInterval);
+      loader.style.opacity = '0';
+      loader.style.transition = 'opacity .6s ease';
+
+      setTimeout(() => loader.remove(), 600);
+    }, 4000);
+  });
+
+  // ===== СКРОЛЛ / ЭФФЕКТЫ =====
+  let lastScroll = 0;
+  const sound = document.getElementById('scrollSound');
+  let cooldown = false;
+  let eggCounter = 0;
+
+  const reveals = document.querySelectorAll('.reveal');
+
+  window.addEventListener('scroll', () => {
+    const current = window.scrollY;
+
+    // Пасхалка: агрессивный скролл
+    if (Math.abs(current - lastScroll) > 300) {
+      document.body.classList.add('shake');
+      eggCounter++;
+
+      setTimeout(() => document.body.classList.remove('shake'), 500);
+
+      window.scrollTo({
+        top: lastScroll,
+        behavior: 'smooth'
+      });
+
+      if (eggCounter === 5) {
+        alert('🥚 Пасхалка найдена! Братуха, ты упорный 😄');
+      }
+
+      return;
+    }
+
+    // Звук прокрутки
+    if (!cooldown && sound) {
+      sound.currentTime = 0;
+      sound.play().catch(() => {});
+      cooldown = true;
+      setTimeout(() => cooldown = false, 200);
+    }
+
+    // Появление текста
+    reveals.forEach(el => {
+      const rect = el.getBoundingClientRect();
+
+      if (rect.top < window.innerHeight - 120) {
+        el.classList.add('visible');
+      }
+    });
+
+    lastScroll = current;
+  });
+</script>
+
+</body>
+</html>
